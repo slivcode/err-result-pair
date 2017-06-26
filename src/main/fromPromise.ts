@@ -1,11 +1,7 @@
-function resolve (r) {
-  return [, r];
-}
+import fromTryCatch from './fromTryCatch';
 
-function decline (e) {
-  return [e];
-}
-
-export default function fromPromise<R> (promiseFn: () => Promise<R>): Promise<[Error, R]> {
-  return promiseFn().catch(decline).then(resolve);
+export default function fromPromise<R> (promiseFn: () => Promise<R>): Promise<[Error | null, R | null]> {
+  return promiseFn()
+    .then((s) => [null, s])
+    .catch(e => [e, null]);
 }
