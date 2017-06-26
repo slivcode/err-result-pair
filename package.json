@@ -1,0 +1,30 @@
+{
+  "name": "err-result-pair",
+  "version": "0.0.2",
+  "description": "go style error handling for javascript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib $(find . -name '*.js')",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slivcode/err-result-pair.git"
+  },
+  "keywords": [
+    "go",
+    "error handler"
+  ],
+  "author": "sliv <sliv.mbp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slivcode/err-result-pair/issues"
+  },
+  "homepage": "https://github.com/slivcode/err-result-pair#readme"
+}
