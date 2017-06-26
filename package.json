@@ -1,6 +1,6 @@
 {
   "name": "err-result-pair",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "go style error handling for javascript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
