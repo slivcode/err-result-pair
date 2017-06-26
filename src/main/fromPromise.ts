@@ -7,5 +7,5 @@ function decline (e) {
 }
 
 export default function fromPromise<R> (promiseFn: () => Promise<R>): Promise<[Error, R]> {
-  return promiseFn().then(resolve).catch(decline);
+  return promiseFn().catch(decline).then(resolve);
 }
